@@ -25,11 +25,11 @@ export BEARER_TOKEN=<your bearer token>
 
 Please extract the Tweet IDs from the `{zho,fas}.doc_tweet_ids.jsonl.gz` via
 ```bash
-./extract.tweet.ids.sh $lang.doc.tweet.ids.jsonl.gz > $lang.tweet.ids.txt
+./extract.tweet.ids.sh ./resources/$lang.doc.tweet.ids.jsonl.gz > $lang.tweet.ids.txt
 ```
 or simply 
 ```bash
-zcat $lang.doc.tweet.ids.*.jsonl.gz | jq -cr '.tweet_ids[] | .[1]' > $lang.tweet.ids.txt
+zcat ./resources/$lang.doc.tweet.ids.*.jsonl.gz | jq -cr '.tweet_ids[] | .[1]' > $lang.tweet.ids.txt
 ```
 or anything that put one required Tweet IDs each line of the file. 
 
@@ -47,7 +47,7 @@ Note that missing any Tweet in the specified language will result in dropping th
 
 ```bash
 python make_collection.py --downloaded_tweets ./downloads/$lang.tweets.jsonl \
-                          --reference_doc_ids $lang.doc.tweet.ids.*.jsonl.gz \
+                          --reference_doc_ids ./resources/$lang.doc.tweet.ids.*.jsonl.gz \
                           --lang $lang \
                           --output_file ./downloads/$lang.docs.jsonl
 ```
@@ -56,7 +56,7 @@ python make_collection.py --downloaded_tweets ./downloads/$lang.tweets.jsonl \
 
 Please use the following command to verify the collection you assembled. 
 ```bash
-python verify.py --doc_file ./downloads/$lang.test.docs.jsonl --id_files ./$lang.doc.tweet.ids.*.jsonl.gz 
+python verify.py --doc_file ./downloads/$lang.test.docs.jsonl --id_files ./resources/$lang.doc.tweet.ids.*.jsonl.gz 
 ```
 
 ## Excluding Unavailable Documents
@@ -70,6 +70,6 @@ The following command is an example
 python filter_docs.py --ids your-zho-docs.jsonl --runs ./run_files/zho.comb.BM25-QHT.trec 
 ```
 
-# Citation
+## Citation
 
 TBA
