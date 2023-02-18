@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Please cite this paper if you use the dataset or referece the baseline runs."
+reference: 
+  type: article
+  # type: conference-paper
+  authors:
+    - family-names: "Lawrie"
+      given-names: "Dawn"
+      orcid: "https://orcid.org/0000-0001-7347-7086"
+    - family-names: "Mayfield"
+      given-names: "James"
+      orcid: "https://orcid.org/0000-0003-3866-3013"
+    - family-names: "Oard"
+      given-names: "Douglas W."
+      orcid: "https://orcid.org/0000-0002-1696-0407"
+    - family-names: "Yang"
+      given-names: "Eugene"
+      orcid: "https://orcid.org/0000-0002-0051-1535"
+    - family-names: "Nair"
+      given-names: "Suraj"
+      orcid: "https://orcid.org/0000-0003-2283-7672"
+  title: "HC3: A Suite of Test Collections for CLIR Evaluation over Informal Text"
+  year: 2023
+  repository: "https://github.com/hltcoe/HC3"
+  # conference: 
+  #   - name: ""
+  #   - location: ""
+  #   - city: ""
+  #   - country: ""
+  #   - date-start:
+  #   - date-end: 

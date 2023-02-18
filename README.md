@@ -23,7 +23,7 @@ export BEARER_TOKEN=<your bearer token>
 
 ### Download
 
-Please extract the Tweet IDs from the `{zho,fas}.doc_tweet_ids.jsonl.gz` via
+Please extract the Tweet IDs from the `{zho,fas}.doc_tweet_ids.*.jsonl.gz` via
 ```bash
 ./extract.tweet.ids.sh ./resources/$lang.doc.tweet.ids.jsonl.gz > $lang.tweet.ids.txt
 ```
@@ -33,7 +33,8 @@ zcat ./resources/$lang.doc.tweet.ids.*.jsonl.gz | jq -cr '.tweet_ids[] | .[1]' >
 ```
 or anything that put one required Tweet IDs each line of the file. 
 
-The following command will start downloading the Tweets
+The following command will download the Tweets, passing an exisitng file to the `--tweet_output` tag will resume the download
+and not redownloading the existing Tweets. 
 ```bash
 python download_tweets.py --tweetlist $lang.tweet.ids.txt \
                           --tweet_output ./downloads/$lang.tweets.jsonl \
