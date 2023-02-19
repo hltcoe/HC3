@@ -16,6 +16,9 @@ authors:
   - family-names: "Nair"
     given-names: "Suraj"
     orcid: "https://orcid.org/0000-0003-2283-7672"
+  - family-names: "Galuscakova"
+    given-names: "Petra"
+    orcid: "https://orcid.org/0000-0001-6328-7131"
 title: "HC3: A Suite of Test Collections for CLIR Evaluation over Informal Text"
 url: "https://github.com/hltcoe/HC3"
 preferred-citation:
@@ -37,6 +40,9 @@ preferred-citation:
     - family-names: "Nair"
       given-names: "Suraj"
       orcid: "https://orcid.org/0000-0003-2283-7672"
+    - family-names: "Galuscakova"
+      given-names: "Petra"
+      orcid: "https://orcid.org/0000-0001-6328-7131"
   title: "HC3: A Suite of Test Collections for CLIR Evaluation over Informal Text"
   year: 2023
   repository: "https://github.com/hltcoe/HC3"
