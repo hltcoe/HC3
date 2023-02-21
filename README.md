@@ -1,11 +1,13 @@
 # HC3 Collection
 
-This repository contains 
-- Scripts for downloading and assembling the document collection
-- Topic `jsonl` files
-- Qrels files containing the relevance judgments
-- TREC run files of all baseline runs reported in the paper
-- Script for removing unavailable documents from run files and qrels
+This repository contains scripts for
+- Downloading and assembling the document collection
+- Removing unavailable documents from run files and qrels
+
+And other collection resources, including 
+- Topic `jsonl` files (`resources/{train,eval}.topics.jsonl`)
+- Qrels files containing the relevance judgments (`resources/{zho,fas}.{train,eval}.qrels` )
+- TREC run files of all baseline runs reported in the paper (`run_files/*.trec`)
 
 ## Assembing Document Collections
 
@@ -23,7 +25,7 @@ export BEARER_TOKEN=<your bearer token>
 
 ### Download
 
-Please extract the Tweet IDs from the `{zho,fas}.doc_tweet_ids.*.jsonl.gz` via
+Please extract the Tweet IDs from the `resouces/{zho,fas}.doc_tweet_ids.*.jsonl.gz` via
 ```bash
 ./extract.tweet.ids.sh ./resources/$lang.doc.tweet.ids.jsonl.gz > $lang.tweet.ids.txt
 ```
