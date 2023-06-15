@@ -85,7 +85,8 @@ def main(args):
                     "title": "",
                     "text": text,
                     "tweets": collected_tweets,
-                    "numtweets": ntweets
+                    "numtweets": ntweets,
+                    "date": collected_tweets[-1]['date']
                 }) + '\n')
                 ndoc_created += 1
             ndoc_expected += 1
