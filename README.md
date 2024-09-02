@@ -75,4 +75,4 @@ python filter_docs.py --ids your-zho-docs.jsonl --runs ./run_files/zho.comb.BM25
 
 ## Citation
 
-TBA
+Dawn Lawrie, James Mayfield, Douglas W. Oard, Eugene Yang, Suraj Nair, and Petra Galuščáková. 2023. HC3: A Suite of Test Collections for CLIR Evaluation over Informal Text. In Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '23). Association for Computing Machinery, New York, NY, USA, 2880–2889. https://doi.org/10.1145/3539618.3591893
